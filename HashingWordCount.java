@@ -1,9 +1,5 @@
 package portfolio;
-
-
-
 //count the words in array1 file by hashing
-
 //package required
 import java.io.*;
 import java.util.*;

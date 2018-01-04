@@ -1,6 +1,4 @@
 package portfolio;
-
-
 import java.util.Scanner;
 
 //Recursive function to solution tower of hanoi
@@ -19,9 +17,9 @@ public class TowerOfHanoi {
        }
    }
 
-   
+
    public static void main(String[] args) {
-	   
+
 	   //creating the object and then giving in the input
        TowerOfHanoi towersOfHanoi = new TowerOfHanoi();
        System.out.print("Enter: Total number of disks is = ");

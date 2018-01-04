@@ -1,6 +1,7 @@
 package portfolio;
 import java.util.Iterator;
 
+
 public class DoublyLinkedList<E> implements Iterable<E> {
 	// declaration of the variable
 	// head_of_list(header) and tail_of_list(trailer)
@@ -142,7 +143,7 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 		return new ListIterator();
 	}
 
-	
+
 	//iterator class
 	class ListIterator implements Iterator<E> {
 		Node<E> current;
@@ -177,8 +178,8 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 
 		return str;
 	}
-	
-	
+
+
 	//to check if the contents of the list is in palindrome sequence
 	public boolean isPalindrome() {
 		Boolean var = false;
@@ -188,7 +189,7 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 			return var;
 		}
 
-		
+
 		else {
 			int left = 0;
 			int right = size() - 1;
@@ -242,13 +243,13 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 
 	}
 
-	
+
 
 	// question 8
-	
+
 	public void reverse() {
 		// TODO Auto-generated method stub
-		
+
 		Node<E> prev =null;
 		Node<E> current =head_of_list;
 		Node<E> next1 =null;
@@ -261,7 +262,7 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 			current=next1;
 			//if( current.element==null)
              // break;
-			
+
 		}
 		/* assigning the value of head.Checking for empty list */
 		if(prev!=null) {
@@ -269,25 +270,25 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 		}
 	}
 
-	
-	
+
+
 //Question 9
 	//to find the minimum element from the list
 	 public  Node findMinimum() {
-		 
+
 			//check if the list is empty
 		 if (isEmpty()) {
 	            return null;
 	        }
 		 else {
-			 
+
 			 head_of_list=head_of_list.getNext();
 		 Node  current = head_of_list;
 		 Node  min = current;
 
 		 Integer min_value= (Integer) head_of_list.getElement();
 		// System.out.println("enter loop");
-		
+
 		 //goes through the list,and assigns the value of the min accordingly
 		 while (current != null) {
 			 if(current.getElement()==null)
@@ -295,8 +296,8 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 
 			 if (min_value > (Integer) current.getElement()  ) {
 	           // 	System.out.println("inside");
-	                min = current;      
-	            } 
+	                min = current;
+	            }
 		      // System.out.println("current element....."+current.element);
 		     //  System.out.println("min"+min.getElement());
 			    current=current.getNext();
@@ -306,7 +307,7 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 	        return min;
 		 }
  }
-	 
+
 	 //method to pop the value of min and sort the list
  public E popMinimum() {
 	 //array1 new node called minimum is created
@@ -321,6 +322,6 @@ public class DoublyLinkedList<E> implements Iterable<E> {
 		// TODO
  }
 
-	
+
 
 }
